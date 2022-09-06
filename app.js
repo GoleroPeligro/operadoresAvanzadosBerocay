@@ -141,7 +141,9 @@ const verProd = () => {
 
     if (visto === false) {
         for (const info of productos) {
-            let infoProd = `<strong>Nombre:</strong> ${info.nombre}<br> <strong>Precio:</strong> $${info.precio}<br> <strong>Detalle:</strong> ${info.detalle}`
+            const {nombre, precio, detalle} = info;
+
+            let infoProd = `<strong>Nombre:</strong> ${nombre}<br> <strong>Precio:</strong> $${precio}<br> <strong>Detalle:</strong> ${detalle}`
 
             let divProd = document.createElement('div');
             let pProd = document.createElement('p');
